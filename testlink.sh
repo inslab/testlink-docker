@@ -23,6 +23,10 @@ if [[ ! -d $VOLUME_HOME/mysql ]]; then
     echo "=> Done!"
 else
     echo "=> Using an existing volume of MySQL"
+    echo "=> Set MySQL User password into testlink"
+    sed -i "s/testlink_pass/$MYSQL_PASS/g" /app/testlink/config_db.inc.php
+    /clean.sh
+    echo "=> Done!"
 fi
 
 exec supervisord -n
