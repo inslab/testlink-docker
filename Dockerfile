@@ -1,4 +1,4 @@
-FROM adeo/lamp:latest
+FROM tutum/lamp:latest
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y update
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y install php5-gd
 MAINTAINER Equipe Webtop <webtop@webadeo.net>
