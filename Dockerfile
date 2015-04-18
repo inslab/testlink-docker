@@ -16,8 +16,8 @@ RUN mkdir -p /var/testlink/upload_area/
 RUN chmod 777 /var/testlink/upload_area/
 RUN chmod 777 /var/lib/php5
 WORKDIR /app
-RUN tar -zxvf testlink-1.9.11.tar.gz && rm -f testlink-1.9.11.tar.gz
-RUN mv testlink-1.9.11 testlink && rm -fr testlink-1.9.11
+RUN tar -zxvf testlink-1.9.13.tar.gz && rm -f testlink-1.9.13.tar.gz
+RUN mv testlink-1.9.13 testlink && rm -fr testlink-1.9.13
 RUN chmod 777 testlink/gui/templates_c
 RUN cp config_db.inc.php testlink/
 EXPOSE 80 3306
